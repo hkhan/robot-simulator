@@ -30,20 +30,20 @@ public class Robot {
     }
 
     void rotateLeft() {
-        if (position != null) {
-            int index = DIRECTIONS.indexOf(direction);
-            Collections.rotate(DIRECTIONS, 1);
-            direction = DIRECTIONS.get(index);
-        }
+        rotateHelper(1);
     }
 
     void rotateRight() {
+        rotateHelper(-1);
+
+    }
+
+    private void rotateHelper(int i) {
         if (position != null) {
             int index = DIRECTIONS.indexOf(direction);
-            Collections.rotate(DIRECTIONS, -1);
+            Collections.rotate(DIRECTIONS, i);
             direction = DIRECTIONS.get(index);
         }
-
     }
 
     void move() {

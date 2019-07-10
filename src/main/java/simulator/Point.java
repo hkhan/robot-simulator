@@ -1,12 +1,12 @@
 package simulator;
 
-import lombok.Data;
+import lombok.Value;
 
-@Data
-public final class Point {
+@Value
+public class Point {
 
-    private final int x;
+    private int x;
 
-    private final int y;
+    private int y;
 
 }
